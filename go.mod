@@ -9,5 +9,5 @@ require (
 	goark.dev/gbc-web v0.0.0-20260829151342-b110b412f665
 	goark.dev/goark v0.0.0
 	goark.dev/observe v0.0.0-20260902005121-bfd1b0de0c99
-	goark.dev/observe-http v0.0.0-20260902094022-a1a90bcf2e0f
+	goark.dev/observe-http v0.0.0-20260902105010-c73ae1319ebc
 )
