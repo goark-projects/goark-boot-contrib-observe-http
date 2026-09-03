@@ -75,14 +75,14 @@ func TestClientInterceptorClonesRequestAndInjectsTraceParent(t *testing.T) {
 }
 
 type testResponse struct {
-	header http.Header
+	header servlet.Header
 	status int
 }
 
 func newTestResponse() *testResponse {
-	return &testResponse{header: make(http.Header), status: http.StatusOK}
+	return &testResponse{header: servlet.NewHeader(), status: http.StatusOK}
 }
-func (r *testResponse) Header() http.Header                 { return r.header }
+func (r *testResponse) Header() servlet.Header              { return r.header }
 func (r *testResponse) SetStatus(status int)                { r.status = status }
 func (r *testResponse) Status() int                         { return r.status }
 func (*testResponse) Write(value []byte) (int, error)       { return len(value), nil }
